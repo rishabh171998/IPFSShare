@@ -12,7 +12,7 @@ async function main(filehash) {
     },
   });
   let info = await transporter.sendMail({
-    from: '"Rishabh" <sender@xyzmail.com>', 
+    from: '"Sender" <sender@xyzmail.com>', 
     to: "reciever@xyzmail.com", 
     subject: "File", 
     text: process.env.IPFS_GATEWAY+filehash, 
