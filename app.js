@@ -10,6 +10,6 @@ app.get('/',(req, res) => {
  res.render('home');
 });
 app.use('/upload',up);
-app.listen(2039, () => {
-  console.log('Server is listening on port 3000');
+app.listen(process.env.PORT, () => {
+  console.log('Server Running');
 });
