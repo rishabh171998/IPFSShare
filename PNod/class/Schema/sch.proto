@@ -1,0 +1,23 @@
+message Request
+{
+    enum Type
+    {
+        SEND_MESSAGE;
+        STATS;
+    }
+    required Type type=1;
+
+    optional Stats stat=2;
+
+    optional SendMessages sendMessage=3;
+}
+
+message SendMessages{
+    required bytes data=1;
+    required int64 created=2;
+    required bytes id=3;
+}
+
+message Stats{
+    repeated bytes connectedPeers=1;
+}
